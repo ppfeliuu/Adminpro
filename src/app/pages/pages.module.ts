@@ -1,7 +1,8 @@
 import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './../app-routing.module';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ComponentsModule } from './../components/components.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
@@ -22,6 +23,12 @@ import { FormsModule } from '@angular/forms';
     Grafica1Component,
     PagesComponent,
   ],
-  imports: [CommonModule, SharedModule, RouterModule, FormsModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    RouterModule,
+    FormsModule,
+    ComponentsModule,
+  ],
 })
 export class PagesModule {}
