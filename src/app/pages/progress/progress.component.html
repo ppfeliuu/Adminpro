@@ -12,7 +12,7 @@
             aria-valuemin="0"
             aria-valuemax="100"
             style="height: 5px;"
-            [style.width]="getProcentaje"
+            [style.width]="getProcentaje1"
             role="progressbar"
           ></div>
         </div>
@@ -23,7 +23,7 @@
             aria-valuemin="0"
             aria-valuemax="100"
             style="height: 5px;"
-            [style.width]="getProcentaje"
+            [style.width]="getProcentaje2"
             role="progressbar"
           ></div>
         </div>
@@ -36,7 +36,10 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <app-incrementador [progreso]="15"></app-incrementador>
+        <app-incrementador
+          (valor)="progreso1 = $event"
+          [valor]="0"
+        ></app-incrementador>
       </div>
     </div>
   </div>
@@ -44,7 +47,10 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <app-incrementador></app-incrementador>
+        <app-incrementador
+          (valor)="progreso2 = $event"
+          [valor]="0"
+        ></app-incrementador>
       </div>
     </div>
   </div>
